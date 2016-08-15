@@ -1,7 +1,7 @@
 function my_content_filter($html) {
     $dom = new DOMDocument();
     libxml_use_internal_errors(true);
-    $dom->loadHTML($html);
+    $dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 
     //Evaluate Anchor tag in HTML
     $xpath = new DOMXPath($dom);
