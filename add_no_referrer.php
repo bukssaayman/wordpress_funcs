@@ -1,3 +1,5 @@
+<?php
+
 function my_content_filter($html) {
    if (empty($html)) {
 		return $html;
